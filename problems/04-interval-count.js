@@ -18,7 +18,18 @@ intervalCount(function() {
 
 function intervalCount(cb, delay, amount) {
   // Your code here
+  let count = 0;
+  let intervalObj = setInterval(function () {
+    cb();
+    
+    count++;
+
+    if (count === amount) {
+      clearInterval(intervalObj);
+    }
+  }, delay);
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

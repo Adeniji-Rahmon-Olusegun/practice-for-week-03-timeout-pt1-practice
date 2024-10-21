@@ -25,7 +25,12 @@ setSecondsTimeout(function () {
 
 function setSecondsTimeout(cb, delayInSeconds) {
   // Your code here
+  setTimeout(cb, delayInSeconds * 1000);
 }
+
+setSecondsTimeout(function () {
+  console.log('world');
+}, 1.4); // should print 'world' after 1400 milliseconds
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
